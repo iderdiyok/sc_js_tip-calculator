@@ -16,9 +16,9 @@ function calculate() {
         form.classList.add("was-validated")
     } else {
 
-        tg.innerHTML = (parseFloat(preis.value) * (parseFloat(service.value) / 100)).toFixed(2)
-        gs.innerHTML = (parseFloat(preis.value) + parseFloat(tg.innerHTML)).toFixed(2)
-        pp.innerHTML = (parseFloat(gs.innerHTML) / parseFloat(person.value)).toFixed(2)
+        tg.innerHTML = `${(parseFloat(preis.value) * (parseFloat(service.value) / 100)).toFixed(2)} €`
+        gs.innerHTML = `${(parseFloat(preis.value) + parseFloat(tg.innerHTML)).toFixed(2)} €`
+        pp.innerHTML = `${(parseFloat(gs.innerHTML) / parseFloat(person.value)).toFixed(2)} €`
         calculateList.classList.remove("d-none")
     }
 }
