@@ -1,3 +1,4 @@
+let badges = document.getElementById("badges")
 let form = document.getElementById("form")
 let person = document.getElementById("personen")
 let calculateList = document.getElementById("calculate")
@@ -6,6 +7,9 @@ let service = document.getElementById("service")
 let tg = document.getElementById("tg")
 let pp = document.getElementById("pp")
 let gs = document.getElementById("gs")
+
+
+window.onload = addBadges;
 
 function addPerson(e) {
     // alert(e.innerHTML)
@@ -23,6 +27,9 @@ function calculate() {
     }
 }
 
-// Schlechter Service: 2% Trinkgeld
-// Mittlerer Service: 10% Trinkgeld
-// Super Service: 20% Trinkgeld
+function addBadges() {
+    for (let i = 1; i <= 10; i++) {
+        badges.innerHTML += `<a type="button" class="badge bg-primary col text-decoration-none"
+        onclick="addPerson(this)">${i}</a>`
+    }
+}
